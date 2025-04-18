@@ -1,0 +1,41 @@
+Package: CAIScore
+Type: Package
+Title: Composite Gene Set Signature Scoring via AUCell, UCell, singscore, ssGSEA, and AddModuleScore
+Version: 0.1.0
+Authors@R: 
+    person(given = "Rong",
+           family = "Liu",
+           role = c("ths"),
+           email = "liurong301@126.com")
+    person(given = "Ruiqiu",
+           family = "Chan",
+           role = c("aut", "cre", "com", "cph"),
+           email = "reachu.chan@outlook.com",
+           comment = c(ORCID = "0000-0003-1374-3180"))
+Maintainer: Ruiqiu Chan <reachu.chan@outlook.com>
+Description: 
+    CAIScore implements an ensemble‐based framework for quantifying gene set activity 
+    in single‐cell or bulk transcriptomic data. It integrates five complementary scoring 
+    algorithms—AUCell, UCell, singscore, single‐sample GSEA (ssGSEA via GSVA), and 
+    Seurat’s AddModuleScore—then optionally scales and aggregates them into a unified 
+    composite score for robust pathway or module analysis.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 4.0)
+Imports:
+    Seurat (>= 4.0),
+    AUCell (>= 1.12),
+    UCell (>= 1.1),
+    singscore (>= 1.12),
+    GSVA (>= 1.44),
+    matrixStats,
+    Matrix
+Suggests:
+    testthat (>= 3.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
